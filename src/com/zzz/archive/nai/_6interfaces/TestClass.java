@@ -20,6 +20,5 @@ public class TestClass implements TestInterface, SecondInterface{
         TestClass d = new TestClass();
         d.square(5);
         d.show();
-        staticShow();
     }
 }
