@@ -7,19 +7,18 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
+
 import java.io.IOException;
 
 public class MyClient {
     public static void main(String[] args) throws IOException {
         HttpGet request = new HttpGet("http://httpstat.us/500");
-
+        System.out.println("--- Before...");
         try (CloseableHttpClient httpclient = HttpClients.createDefault();
              CloseableHttpResponse response = httpclient.execute(request);
-        ){
-            System.out.println("--- Before...");
+        ) {
             System.out.println("- - - - - - - - - - - - - - - - - - - - -");
 
-            System.out.println(response.getLocale());
             System.out.println(response.getStatusLine().getStatusCode());
             System.out.println(response.getStatusLine().getReasonPhrase());
             System.out.println(response.getStatusLine().getProtocolVersion());
