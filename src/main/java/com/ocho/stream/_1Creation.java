@@ -1,7 +1,5 @@
 package com.ocho.stream;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -16,7 +14,7 @@ import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
-public class j1 {
+public class _1Creation {
     Stream<String> stringEmpty = Stream.empty();
 
     public Stream<String> streamOf(List<String> list) {
@@ -70,7 +68,7 @@ public class j1 {
 
         System.out.println("Stream of Strings: " + streamOfString.reduce("",(s1, s2) -> s1 + s2 + ", "));
 
-        URL resource = j1.class.getClassLoader().getResource("myfile.txt");
+        URL resource = _1Creation.class.getClassLoader().getResource("myfile.txt");
         Path path = Paths.get(resource.toURI());
         Stream<String> streamOfStrings = Files.lines(path);
         System.out.println("Stream from file:");
